@@ -1,0 +1,98 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+const Navbar = (props)=>{
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 7
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+        className: "navbar navbar-dark bg-dark navbar-expand-lg",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 8
+        },
+        __self: undefined
+    }, "Welcome to Admin Page", /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "collapse navbar-collapse",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 10
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+        className: "navbar-nav",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 11
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        className: "navbar-item",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 12
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/home",
+        className: "nav-link",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 13
+        },
+        __self: undefined
+    }, "View Conference")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        className: "navbar-item",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 15
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/template",
+        className: "nav-link",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 16
+        },
+        __self: undefined
+    }, "Add Template")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 19
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        onClick: ()=>{
+            localStorage.clear();
+            props.history.push('/login');
+        },
+        className: "btn btn-primary",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\Navbar.jsx",
+            lineNumber: 20
+        },
+        __self: undefined
+    }, "Logout")))))));
+};
+_c = Navbar;
+exports.default = Navbar;
+var _c;
+$RefreshReg$(_c, "Navbar");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

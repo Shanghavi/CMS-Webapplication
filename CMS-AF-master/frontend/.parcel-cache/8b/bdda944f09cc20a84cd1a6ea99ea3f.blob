@@ -1,0 +1,46 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _has = _interopRequireDefault(require("lodash/has"));
+var _isSchema = _interopRequireDefault(require("./util/isSchema"));
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+class Condition {
+    constructor(refs, options1){
+        this.refs = refs;
+        this.refs = refs;
+        if (typeof options1 === 'function') {
+            this.fn = options1;
+            return;
+        }
+        if (!_has.default(options1, 'is')) throw new TypeError('`is:` is required for `when()` conditions');
+        if (!options1.then && !options1.otherwise) throw new TypeError('either `then:` or `otherwise:` is required for `when()` conditions');
+        let { is , then , otherwise  } = options1;
+        let check = typeof is === 'function' ? is : (...values)=>values.every((value)=>value === is
+            )
+        ;
+        this.fn = function(...args) {
+            let options1 = args.pop();
+            let schema = args.pop();
+            let branch = check(...args) ? then : otherwise;
+            if (!branch) return undefined;
+            if (typeof branch === 'function') return branch(schema);
+            return schema.concat(branch.resolve(options1));
+        };
+    }
+    resolve(base, options) {
+        let values = this.refs.map((ref)=>ref.getValue(options == null ? void 0 : options.value, options == null ? void 0 : options.parent, options == null ? void 0 : options.context)
+        );
+        let schema = this.fn.apply(base, values.concat(base, options));
+        if (schema === undefined || schema === base) return base;
+        if (!_isSchema.default(schema)) throw new TypeError('conditions must return a schema object');
+        return schema.resolve(options);
+    }
+}
+var _default = Condition;
+exports.default = _default;

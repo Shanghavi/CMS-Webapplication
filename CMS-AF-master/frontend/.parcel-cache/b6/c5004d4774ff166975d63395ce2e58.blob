@@ -1,0 +1,274 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// import React, { Component } from 'react'
+// import Button from "react-bootstrap/Button";
+// import axios from 'axios';
+// import Table from 'react-bootstrap/Table'
+// import Template from '../../../backend/models/template.model';
+// const Template = props => (
+//     <tr>
+//         <td>{props.file.templatename}</td>
+//         <td>{props.file.fileName}</td>
+//         <td>
+//             <button className="btn btn-secondary"><Link to={"/edit/"+props.file._id} style={{color:"white"}}>Edit</Link></button> | <button className="btn btn-danger" onClick={() => {props.deleteExercise(props.file._id) }}>Delete</button>
+//         </td>
+//     </tr>
+// )
+// class ViewTemplate extends Component {
+//     constructor(props){
+//         super(props);
+//         this.getAll = this.getAll.bind(this);
+//         this.state =  {
+//             templates : []
+//         }
+//         this.deleteExercise = this.deleteExercise.bind(this);
+//     }
+//      componentDidMount(){
+//         axios.get("http://localhost:5000/api/").then((res) => {
+//             this.setState({templates : res.data})
+//             console.log(res.data);
+//         })
+//     }
+//     deleteExercise(id) {
+//         axios.delete('http://localhost:5000/api/' +id)
+//             .then(res => console.log(res.data));
+//         this.setState({ templates: this.state.templates.filter(el => el._id !== id)})
+//     }
+//     getAll(){
+//         return this.state.templates.map((file) => {
+//            return(
+//                <tr key={file._id}>
+//                    <td>{file.templatename}</td>
+//                    <td>{<a href={"http://localhost:5000/" + file.filePath} target="_blank" >{file.fileName}</a>}</td>
+//                </tr>
+//            )
+//        })
+//    }
+//    templateList() {
+//     return this.state.templates.map(currenttemplate => {
+//         return <Template template={currenttemplate} deleteTemplate={this.deleteTemplate} key={currenttemplate._id} />
+//     })
+// }
+//     render() {
+//         return (
+//             <div>
+//                <h4>Templates</h4>
+//                 <br></br>
+//                 <container>
+//                 <Table striped bordered hover variant="dark" >
+//                     <thead>
+//                         <tr>
+//                             <th>Template Name</th>
+//                             <th>Templates</th>
+//                         </tr>
+//                     </thead>
+//                     <tbody>
+//                         {this.getAll()}
+//                     </tbody>
+//                 </Table>
+//                 </container>
+//             </div>
+//         )
+//     }
+// }
+// export default ViewTemplate
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _table = require("react-bootstrap/Table");
+var _tableDefault = parcelHelpers.interopDefault(_table);
+var _navbar = require("./Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+class ViewTemplate extends _react.Component {
+    constructor(props){
+        super(props);
+        this.getAll = this.getAll.bind(this);
+        this.state = {
+            templates: []
+        };
+        this.deleteTemplate = this.deleteTemplate.bind(this);
+    }
+    async componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/").then((res)=>{
+            this.setState({
+                templates: res.data
+            });
+            console.log(res.data);
+        });
+    }
+    deleteTemplate(id) {
+        _axiosDefault.default.delete("http://localhost:5000/api/" + id).then((res)=>{
+            console.log(res.data);
+        });
+        this.setState({
+            templates: this.state.templates.filter((el)=>el._id !== id
+            )
+        });
+    }
+    getAll() {
+        return this.state.templates.map((file)=>{
+            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                key: file._id,
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 133
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 134
+                },
+                __self: this
+            }, file.templatename), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 135
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: "http://localhost:5000/" + file.filePath,
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 135
+                },
+                __self: this
+            }, file.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 136
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(Link, {
+                to: "/edit",
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 136
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+                variant: "info",
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 136
+                },
+                __self: this
+            }, "Edit"))), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 137
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+                onClick: ()=>this.deleteTemplate(file._id)
+                ,
+                variant: "info",
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                    lineNumber: 137
+                },
+                __self: this
+            }, "Delete"))));
+        });
+    }
+    f;
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 148
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_navbarDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 149
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            style: {
+                textAlign: "center"
+            },
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 150
+            },
+            __self: this
+        }, "Templates"), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 151
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+            striped: true,
+            bordered: true,
+            hover: true,
+            variant: "dark",
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 152
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 154
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 155
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 156
+            },
+            __self: this
+        }, "Template Name"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 157
+            },
+            __self: this
+        }, "Templates"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 158
+            },
+            __self: this
+        }, "Edit"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 159
+            },
+            __self: this
+        }, "Delete"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewTemplate.jsx",
+                lineNumber: 163
+            },
+            __self: this
+        }, this.getAll()))));
+    }
+}
+exports.default = ViewTemplate;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

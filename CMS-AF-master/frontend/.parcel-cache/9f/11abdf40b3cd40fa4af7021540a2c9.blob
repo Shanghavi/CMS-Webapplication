@@ -1,0 +1,294 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _reactRouterDom = require("react-router-dom");
+var _navbar = require("./Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+const Home = (props)=>{
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 8
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_navbarDefault.default, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 9
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        style: {
+            textAlign: "right"
+        },
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 10
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        onClick: ()=>{
+            localStorage.clear();
+            props.history.push('/login');
+        },
+        className: "btn btn-secondary",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 11
+        },
+        __self: undefined
+    }, "Logout")), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 16
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 18
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("table", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 19
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 20
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 21
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 21
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 22
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/template",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 23
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "btn btn-secondary",
+        size: "sm",
+        type: "submit",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 23
+        },
+        __self: undefined
+    }, "Add Template Details"))))), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 27
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 29
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 30
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/viewtemplate",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 31
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "btn btn-secondary",
+        size: "lg",
+        type: "submit",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 31
+        },
+        __self: undefined
+    }, "View Template Details"))))), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 35
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 36
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 37
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/viewconference",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 38
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "btn btn-secondary",
+        size: "lg",
+        type: "submit",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 38
+        },
+        __self: undefined
+    }, "View Conference Details"), " "))))), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 43
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 44
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 45
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 46
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/viewuser",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 47
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "btn btn-secondary",
+        size: "lg",
+        type: "submit",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 47
+        },
+        __self: undefined
+    }, " View User Details"), " ")))), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 51
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 52
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 53
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/viewresearch",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 54
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "btn btn-secondary",
+        size: "lg",
+        type: "submit",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 54
+        },
+        __self: undefined
+    }, "View Research Paper Details"), " ")))), /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 58
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 59
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 60
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/viewworkshop",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 61
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "btn btn-secondary",
+        size: "lg",
+        type: "submit",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 61
+        },
+        __self: undefined
+    }, "View Workshop Details"), " ")))))))));
+};
+_c = Home;
+exports.default = Home;
+var _c;
+$RefreshReg$(_c, "Home");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

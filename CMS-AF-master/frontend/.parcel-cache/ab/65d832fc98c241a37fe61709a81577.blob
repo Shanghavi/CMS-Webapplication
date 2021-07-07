@@ -1,0 +1,48 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _navbar = require("./Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+const Home = (props)=>{
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 6
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_navbarDefault.default, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 7
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        onClick: ()=>{
+            localStorage.clear();
+            props.history.push('./login');
+        },
+        className: "btn btn-primary",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\home.jsx",
+            lineNumber: 8
+        },
+        __self: undefined
+    }, "Logout")));
+};
+_c = Home;
+exports.default = Home;
+var _c;
+$RefreshReg$(_c, "Home");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

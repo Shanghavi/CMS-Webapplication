@@ -1,0 +1,185 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _formik = require("formik");
+var _yup = require("yup");
+var _reactToastify = require("react-toastify");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _s = $RefreshSig$();
+const Login = (props)=>{
+    _s();
+    const formik = _formik.useFormik({
+        initialValues: {
+            email: '',
+            password: ''
+        },
+        validationSchema: _yup.object({
+            email: _yup.string().email('Enter valid email address').strict().trim().required('This field is required'),
+            password: _yup.string().strict().trim().required('This field is required')
+        }),
+        onSubmit: (data)=>{
+            _axiosDefault.default.post('http://localhost:5000/api/login', data).then((res)=>{
+                _reactToastify.toast.success("login sucessfully");
+                localStorage.setItem('auth', JSON.stringify(res.data));
+                props.history.push('./Navbar');
+            }).catch((err)=>{
+                _reactToastify.toast.error(err.response.data);
+            });
+        }
+    });
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "container mt-4",
+        style: {
+            width: "500px"
+        },
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 51
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "jumbotron",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 52
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+        style: {
+            textAlign: "center"
+        },
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 53
+        },
+        __self: undefined
+    }, "Login"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+        autoComplete: "off",
+        onSubmit: formik.handleSubmit,
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 54
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "form-group",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 57
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 58
+        },
+        __self: undefined
+    }, "Email"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+        name: "email",
+        className: "form-control",
+        type: "text",
+        onChange: formik.handleChange,
+        value: formik.values.email,
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 59
+        },
+        __self: undefined
+    }), formik.errors.email ? /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "text-danger",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 60
+        },
+        __self: undefined
+    }, formik.errors.email) : null), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 62
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "form-group",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 63
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 64
+        },
+        __self: undefined
+    }, "Password"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+        name: "password",
+        className: "form-control",
+        type: "text",
+        onChange: formik.handleChange,
+        value: formik.values.password,
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 65
+        },
+        __self: undefined
+    }), formik.errors.password ? /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "text-danger",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 66
+        },
+        __self: undefined
+    }, formik.errors.password) : null), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 69
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "d-flex justify-content-between",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 71
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "btn btn-secondary",
+        type: "submit",
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 72
+        },
+        __self: undefined
+    }, " Submit"), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+        href: "#",
+        onClick: ()=>{
+            window.location.href = 'register';
+        },
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\login.jsx",
+            lineNumber: 74
+        },
+        __self: undefined
+    }, "Register"))))));
+};
+_s(Login, "B/4rI4IXClQ7sG7psKj+pOuRe5Q=", false, function() {
+    return [_formik.useFormik];
+});
+_c = Login;
+exports.default = Login;
+var _c;
+$RefreshReg$(_c, "Login");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

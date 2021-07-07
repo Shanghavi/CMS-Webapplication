@@ -1,0 +1,34 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactDom = require("react-dom");
+var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _app = require("./App");
+var _appDefault = parcelHelpers.interopDefault(_app);
+var _reactRouterDom = require("react-router-dom");
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+_reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+    __source: {
+        fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\index.jsx",
+        lineNumber: 7
+    },
+    __self: undefined
+}, /*#__PURE__*/ _reactDefault.default.createElement(_appDefault.default, {
+    __source: {
+        fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\index.jsx",
+        lineNumber: 7
+    },
+    __self: undefined
+})), document.getElementById('app'));
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

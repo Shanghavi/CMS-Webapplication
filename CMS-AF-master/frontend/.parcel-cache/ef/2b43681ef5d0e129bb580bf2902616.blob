@@ -1,0 +1,169 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _form = require("react-bootstrap/Form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+class sampleform extends _react.Component {
+    constructor(props){
+        super(props);
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangeName = this.onChangeName.bind(this);
+        this.onChangeAge = this.onChangeAge.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.state = {
+            email: "",
+            name: "",
+            age: ""
+        };
+    }
+    onChangeEmail(e) {
+        this.setState({
+            email: e.target.value
+        });
+    }
+    onChangeName(e) {
+        this.setState({
+            name: e.target.value
+        });
+    }
+    onChangeAge(e) {
+        this.setState({
+            age: e.target.value
+        });
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        const UserDetails = {
+            email: this.state.email,
+            name: this.state.name,
+            age: this.state.age
+        };
+        axios.post("http://localhost:5000/api/user/add", UserDetails).then((res)=>{
+            console.log(res.data);
+        });
+        this.setState({
+            email: "",
+            name: "",
+            age: ""
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default, {
+            onSubmit: this.onSubmit,
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 68
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
+            className: "mb-3",
+            controlId: "formBasicEmail",
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 69
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 70
+            },
+            __self: this
+        }, "Email address"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
+            type: "email",
+            placeholder: "Enter email",
+            onChange: this.onChangeEmail,
+            value: this.state.email,
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 71
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Text, {
+            className: "text-muted",
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 72
+            },
+            __self: this
+        }, "We'll never share your email with anyone else.")), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
+            className: "mb-3",
+            controlId: "formBasicEmail",
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 77
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 78
+            },
+            __self: this
+        }, "Name"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
+            type: "email",
+            placeholder: "Enter name",
+            onChange: this.onChangeName,
+            value: this.state.name,
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 79
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
+            className: "mb-3",
+            controlId: "formBasicEmail",
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 82
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Label, {
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 83
+            },
+            __self: this
+        }, "Age"), /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Control, {
+            type: "email",
+            placeholder: "Enter  age",
+            onChange: this.onChangeAge,
+            value: this.state.age,
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 84
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            variant: "primary",
+            type: "submit",
+            __source: {
+                fileName: "C:\\Users\\94772\\Desktop\\Conference Management System\\frontend\\Components\\Vithursan\\sampleform.jsx",
+                lineNumber: 88
+            },
+            __self: this
+        }, "Submit"))));
+    }
+}
+exports.default = sampleform;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

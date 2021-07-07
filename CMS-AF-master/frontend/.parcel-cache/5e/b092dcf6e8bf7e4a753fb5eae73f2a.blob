@@ -1,0 +1,139 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _table = require("react-bootstrap/Table");
+var _tableDefault = parcelHelpers.interopDefault(_table);
+class ViewResearch extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            details: []
+        };
+        this.getAll = this.getAll.bind(this);
+    }
+    async componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/api/research/getSingleFiles").then((res)=>{
+            this.setState({
+                details: res.data.data
+            });
+            console.log(res.data.data);
+        });
+    }
+    getAll() {
+        return this.state.details.map((info)=>{
+            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                key: info._id,
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                    lineNumber: 28
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                    lineNumber: 29
+                },
+                __self: this
+            }, info.rtitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                    lineNumber: 30
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: "http://localhost:5000/" + info.filePath,
+                target: "_blank",
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                    lineNumber: 31
+                },
+                __self: this
+            }, info.fileName)), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                    lineNumber: 35
+                },
+                __self: this
+            }, info.user.name)));
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            style: {
+                marginTop: "75px",
+                marginLeft: "390px"
+            },
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 45
+            },
+            __self: this
+        }, "View Research Paper Details"), /*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+            striped: true,
+            bordered: true,
+            hover: true,
+            className: "container-md",
+            style: {
+                marginTop: 100
+            },
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 51
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 58
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 59
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 61
+            },
+            __self: this
+        }, "Topic"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 62
+            },
+            __self: this
+        }, "FileName"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 63
+            },
+            __self: this
+        }, "Research Conductor"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\ViewResearch.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }, this.getAll()))));
+    }
+}
+exports.default = ViewResearch;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

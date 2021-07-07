@@ -1,0 +1,88 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _register = require("./Components/Shanghavi/register");
+var _registerDefault = parcelHelpers.interopDefault(_register);
+var _login = require("./Components/Shanghavi/login");
+var _loginDefault = parcelHelpers.interopDefault(_login);
+var _home = require("./Components/Shanghavi/home");
+var _homeDefault = parcelHelpers.interopDefault(_home);
+var _reactRouterDom = require("react-router-dom");
+var _protected = require("./Components/Shanghavi/protected");
+var _protectedDefault = parcelHelpers.interopDefault(_protected);
+var _reactToastify = require("react-toastify");
+var _reactToastifyCss = require("react-toastify/dist/ReactToastify.css");
+const App = ()=>{
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\App.jsx",
+            lineNumber: 13
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\App.jsx",
+            lineNumber: 15
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/",
+        component: _loginDefault.default,
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\App.jsx",
+            lineNumber: 16
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/register",
+        component: _registerDefault.default,
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\App.jsx",
+            lineNumber: 17
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/login",
+        component: _loginDefault.default,
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\App.jsx",
+            lineNumber: 18
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_protectedDefault.default, {
+        exact: true,
+        path: "/home",
+        component: _homeDefault.default,
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\App.jsx",
+            lineNumber: 19
+        },
+        __self: undefined
+    })), /*#__PURE__*/ _reactDefault.default.createElement(_reactToastify.ToastContainer, {
+        __source: {
+            fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\App.jsx",
+            lineNumber: 25
+        },
+        __self: undefined
+    })));
+};
+_c = App;
+exports.default = App;
+var _c;
+$RefreshReg$(_c, "App");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

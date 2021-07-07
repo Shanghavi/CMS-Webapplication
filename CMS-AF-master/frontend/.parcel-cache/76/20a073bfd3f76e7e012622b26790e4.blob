@@ -1,0 +1,159 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _navbar = require("./Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+class CreateTemplate extends _react.Component {
+    constructor(props){
+        super();
+        this.state = {
+            templatename: "",
+            selectedFile: null
+        };
+        this.onFileChange = this.onFileChange.bind(this);
+        this.onFileUpload = this.onFileUpload.bind(this);
+        this.onChangeTemplatename = this.onChangeTemplatename.bind(this);
+    }
+    onChangeTemplatename(e) {
+        this.setState({
+            templatename: e.target.value
+        });
+    }
+    onFileChange = (event)=>{
+        // Update the state
+        this.setState({
+            selectedFile: event.target.files[0]
+        });
+    };
+    // On file upload (click the upload button)
+    onFileUpload = ()=>{
+        const formdata = new FormData();
+        formdata.append("file", this.state.selectedFile);
+        formdata.append("templatename", this.state.templatename);
+        console.log(this.state.selectedFile);
+        _axiosDefault.default.post("http://localhost:5000/api/template", formdata).then((res)=>console.log(res)
+        );
+        window.location = "/";
+    };
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 47
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_navbarDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 48
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 49
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 50
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 51
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 52
+            },
+            __self: this
+        }, "Create New Template"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 53
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 54
+            },
+            __self: this
+        }, "Template name: "), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            required: true,
+            className: "form-control",
+            value: this.state.templatename,
+            onChange: this.onChangeTemplatename,
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 55
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 62
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "form-group",
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 65
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "file",
+            onChange: this.onFileChange,
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 66
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 68
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            onClick: this.onFileUpload,
+            className: "btn btn-info",
+            __source: {
+                fileName: "C:\\Users\\DELL\\Desktop\\CMS-AF-master\\CMS-AF-master\\frontend\\Components\\Shanghavi\\CreateTemplate.jsx",
+                lineNumber: 69
+            },
+            __self: this
+        }, "Submit")))));
+    }
+}
+exports.default = CreateTemplate;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
